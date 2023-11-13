@@ -225,6 +225,7 @@ Using the above we get the flag:
 PRACTICE
 
 Information (forensics)
+
 exiftool is a tool used to display all details about a jpg file and since the hint mentions that we might need to do this, hence we can run this command on the image
 
 Since there are uppercase, lowercase AND digits in the license, it might be base64 encoded
@@ -232,6 +233,7 @@ Decoding through base64 we get:
 picoCTF{the_m3tadata_1s_modified}
 
 Insp3ct0r (Webex)
+
 Viewing source code of the website:
 
 We have one part of the flag
@@ -243,6 +245,7 @@ We have part 2 and 3 of the flag also:
 flag: picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?2e7b23e3}
 
 advanced-potion-making (forensics)
+
 We have been given a file here called advanced-potion-making. When we try to open the file it gives unknown file type error. Hence we can put the file in a hex editor to check the file header to see what type of file it is. 
 
 On searching the wikipedia page of file signatures starting with 89 50:
