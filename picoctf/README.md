@@ -38,6 +38,7 @@ buffer overflow 0        100
 WEB EXPLOITATION
 
 caas                               150
+
 When we click on the website link we get the following:
 
 Displaying the javascript file, we can see the below code:
@@ -83,6 +84,7 @@ https://portswigger.net/web-security/os-command-injection
 
 Forbidden paths           200
 
+
 When we go to the website, type in file.txt and read, we get an expected error of ‘File does not exist’.
 
 The description mentioned that we are now located at /usr/share/nginx/html/, and flag is stored in  /flag.txt. So we can use path traversal. Path traversal is also known as directory traversal. These vulnerabilities enable an attacker to read arbitrary files on the server that is running an application. To achieve this, we use   ../ to travel to the upper layer.
@@ -97,6 +99,7 @@ https://portswigger.net/web-security/file-path-traversal
 
 
 Local Authority             100
+
 Hint tells us to look at how the password input is being taken
 Viewing page source of the website we get the following:
 
@@ -114,6 +117,7 @@ picoCTF{j5_15_7r4n5p4r3n7_05df90c8}
 FORENSICS
 
 tunn3l v1s10n             40
+
 Putting the image in a hex editor, we get file signature as 42 4D which corresponds to a BMP file. Adding a ‘.bmp’ extension to the file and opening it in an online editor like Photopea, we get the following image
 
 The image does not look like it is displaying completely, so we can go to hex editor and change the height to equal the width(as width is more)
