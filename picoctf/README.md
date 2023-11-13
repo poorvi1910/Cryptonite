@@ -1,6 +1,6 @@
 REVERSE ENGINEERING
 
-Keygenme-py          30
+1) Keygenme-py          30
 We have been given  python code which basically is a menu driven program that works as an arcane calculator and theres a key you need to input to get access to the full version. We are checking the input key against the predefined key character by character.We have been give the static part of the key that is "picoCTF{1n_7h3_|<3y_of_" and the third part “}”. To find dynamic part:
 
 hashlib.sha256(username_trial).hexdigest():
@@ -17,27 +17,27 @@ So to get the key we can just print what the hashlib function does
 Combining all the key parts we get the flag:
 picoCTF{1n_7h3_|<3y_of_e584b363}
 
-GDB Baby Step 1       100
+2) GDB Baby Step 1       100
 
 
-ARMssembly 0           40
+3) ARMssembly 0           40
 
 
 BINARY EXPLOITATION
 
-Stonks                20
+1) Stonks                20
 
 
-babygame01             100
+2) babygame01             100
 
 
-buffer overflow 0        100
+3) buffer overflow 0        100
 
 
 
 WEB EXPLOITATION
 
-caas                               150
+1) caas                               150
 
 When we click on the website link we get the following:
 
@@ -82,7 +82,7 @@ What is OS command injection:
 https://portswigger.net/web-security/os-command-injection
 
 
-Forbidden paths           200
+2) Forbidden paths           200
 
 
 When we go to the website, type in file.txt and read, we get an expected error of ‘File does not exist’.
@@ -98,7 +98,7 @@ What is path traversal:
 https://portswigger.net/web-security/file-path-traversal
 
 
-Local Authority             100
+3) Local Authority             100
 
 Hint tells us to look at how the password input is being taken
 Viewing page source of the website we get the following:
@@ -116,7 +116,7 @@ picoCTF{j5_15_7r4n5p4r3n7_05df90c8}
 
 FORENSICS
 
-tunn3l v1s10n             40
+1) tunn3l v1s10n             40
 
 Putting the image in a hex editor, we get file signature as 42 4D which corresponds to a BMP file. Adding a ‘.bmp’ extension to the file and opening it in an online editor like Photopea, we get the following image
 
@@ -138,7 +138,7 @@ https://stackoverflow.com/questions/141262/can-someone-explain-hex-offsets-to-me
 
 
 
-Trivial FTP                   90
+2) Trivial FTP                   90
 
 
 Opening instructions.txt we get the following cipher:
@@ -164,7 +164,7 @@ Using cat command on the flag.txt file, we get the flag:
 picoCTF{h1dd3n_1n_pLa1n_51GHT_18375919}
 
 
-Macrohard Weakedge     60
+3) Macrohard Weakedge     60
 We have been given a pptm file over here. 
 Checking file details there is nothing useful found:
 
@@ -182,13 +182,13 @@ flag: picoCTF{D1d_u_kn0w_ppts_r_z1p5}
 
 CRYPTOGRAPHY
 
-new caesar             60
+1) new caesar             60
 
 
-miniRSA                  300
+2) miniRSA                  300
 
 
-mod1 
+3) mod1 
 The text file contains the following:
 350 63 353 198 114 369 346 184 202 322 94 235 114 110 185 188 225 212 366 374 261 213 
 
@@ -203,7 +203,7 @@ Using the above we get the flag:
 r0und_n_r0und_add17ec2
 
 
-mod2          
+4) mod2          
 The text file contains the following:
 104 372 110 436 262 173 354 393 351 297 241 86 262 359 256 441 124 154 165 165 219 288 42
 
@@ -224,7 +224,7 @@ Using the above we get the flag:
 
 PRACTICE
 
-Information (forensics)
+1) Information (forensics)
 
 exiftool is a tool used to display all details about a jpg file and since the hint mentions that we might need to do this, hence we can run this command on the image
 
@@ -232,7 +232,7 @@ Since there are uppercase, lowercase AND digits in the license, it might be base
 Decoding through base64 we get:
 picoCTF{the_m3tadata_1s_modified}
 
-Insp3ct0r (Webex)
+2) Insp3ct0r (Webex)
 
 Viewing source code of the website:
 
@@ -244,7 +244,7 @@ Clicking on the mycss.css and myjs.js links:
 We have part 2 and 3 of the flag also:
 flag: picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?2e7b23e3}
 
-advanced-potion-making (forensics)
+3) advanced-potion-making (forensics)
 
 We have been given a file here called advanced-potion-making. When we try to open the file it gives unknown file type error. Hence we can put the file in a hex editor to check the file header to see what type of file it is. 
 
