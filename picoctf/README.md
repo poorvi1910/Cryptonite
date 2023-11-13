@@ -12,22 +12,15 @@ The result of the hash is a string of characters (hexadecimal).
 [4] is used to access the character at index 4 of the hexadecimal string. This is a specific character of the hash.
 
 Hence the line is checking whether the i-th character of the key string is not equal to the character at index 4 of the hexadecimal representation of the SHA-256 hash of the username.
-	
-	So to get the key we can just print what the hashlib function does 
+So to get the key we can just print what the hashlib function does 
 
-
-
-
-Combing all the key parts we get the flag:
+Combining all the key parts we get the flag:
 picoCTF{1n_7h3_|<3y_of_e584b363}
 
 GDB Baby Step 1       100
 
 
 ARMssembly 0           40
-
-
-
 
 
 BINARY EXPLOITATION
@@ -39,9 +32,6 @@ babygame01             100
 
 
 buffer overflow 0        100
-
-
-
 
 
 
