@@ -1,3 +1,7 @@
+Since the name of the challenge hints at FTP, we can try opening the file in wireshark and analysing it
+
+![tf1](https://github.com/poorvi1910/Cryptonite/assets/146640913/1f0a6363-5f5d-4b45-ae61-119054c748ff)
+
 Opening instructions.txt we get the following cipher:
 GSGCQBRFAGRAPELCGBHEGENSSVPFBJRZHFGQVFTHVFRBHESYNTGENAFSRE.SVTHERBHGNJNLGBUVQRGURSYNTNAQVJVYYPURPXONPXSBEGURCYNA
 
@@ -14,8 +18,11 @@ Steghide is designed to be portable and configurable and features hiding data in
 
 Installing the package and running the command on the three images using ‘DUEDILIGENCE’, we get no output for first 2 images 
 
+![tf2](https://github.com/poorvi1910/Cryptonite/assets/146640913/427c05db-ede6-4c7a-9b30-5d63b212bdee)
+
 But the third image:
 
+![tf3](https://github.com/poorvi1910/Cryptonite/assets/146640913/1df1ab51-8dbb-48cd-b49b-32ba099cf991)
 
 Using cat command on the flag.txt file, we get the flag:
 picoCTF{h1dd3n_1n_pLa1n_51GHT_18375919}
