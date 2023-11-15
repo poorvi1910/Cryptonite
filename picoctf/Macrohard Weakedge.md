@@ -1,6 +1,9 @@
 We have been given a pptm file over here. 
 Checking file details there is nothing useful found:
 
+![mw1](https://github.com/poorvi1910/Cryptonite/assets/146640913/f73458d0-44ab-49b8-b54c-c835f48daa9a)
+
+
 Hence we can convert the file to a zip instead by changing extension to ‘.zip’ instead of ‘.pptm’ and sorting through the files, we come across a file named ‘hidden’
 
 Opening the hidden file we get the cipher below:
