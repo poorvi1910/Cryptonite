@@ -3,7 +3,7 @@ c=m^e mod n
 So to find m, we take any random integer k, so m will be:
 m=( k*n+c)^1/e
 Hence we write the following python program which finds all the possible m values and prints the one which has the flag
-
+-----------------------------------------------------------------------------------------------------------------------------
 import Crypto.Util.number
 
 #C = m^e mod n
@@ -39,6 +39,6 @@ while True:
         print(m)
         break
     k+=1
-
+-----------------------------------------------------------------------------------------------
 
 Running the code we get : picoCTF{n33d_a_lArg3r_e_d0cd6eae}
