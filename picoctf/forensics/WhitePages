@@ -1,0 +1,34 @@
+When we open the file in a hex editor, we can see repeated patterns of E2 80 83 and 20 which are repectively the denotion of whitespace character in UNICODE and ASCII.
+Since there are only 2 characters repeating it could represent binary.
+Hence to get the pattern in binary form, we can write a python script :
+
+
+def convertSpacesToBinary():
+    with open("C:\\Users\\Lunaniverse\\Downloads\\whitepages.txt", 'rb') as f:
+        binary_data = f.read()
+        binary_data = binary_data.replace(b'\xe2\x80\x83', b'0')
+        binary_data = binary_data.replace(b'\x20', b'1')
+        binary_data = binary_data.decode()
+    return binary_data    
+
+def convertFromBinaryToASCII(binaryValues):
+    binary_int = int(binaryValues, 2)
+    byte_number = (binary_int.bit_length() + 7) // 8
+
+    binary_array = binary_int.to_bytes(byte_number, "big")
+    ascii_text = binary_array.decode('ascii')
+
+    print(ascii_text)
+
+convertFromBinaryToASCII(convertSpacesToBinary())
+
+If this doesnt work, we can interchange the value of binaries we have assigned
+
+On running the script:
+
+		picoCTF
+
+		SEE PUBLIC RECORDS & BACKGROUND REPORT
+		5000 Forbes Ave, Pittsburgh, PA 15213
+		picoCTF{not_all_spaces_are_created_equal_7100860b0fa779a5bd8ce29f24f586dc}
+
