@@ -1,0 +1,29 @@
+In this question, we are directed to a login page. I first tried the payload "' OR 1=1 --" but it did not work. 
+Then i viewed the source code and i saw that in the script.js link, the username and password was mentioned. So i used that to login.
+
+    const data = {
+        "username": username,
+        "password": password
+    };
+
+This takes us to a dashboard where if we view the source code we see the below code snippet:
+
+        if (post_in.startsWith('cat flag.txt')) {
+            fetch('/execute', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `post_input=${encodeURIComponent(post_in)}`
+            })
+            .then(response => response.text())
+            .then(result => {
+                const contentSection = document.querySelector('.content');
+                const newPost = document.createElement('div');
+                newPost.classList.add('post');
+                newPost.innerHTML = `<h3>Flag Post</h3><p>${result}</p>`;
+                contentSection.appendChild(newPost);
+            });
+
+  Hence we enter 'cat flag.txt' in the input box and the flag is printed
+  Flag: KCTF{Fram3S_n3vE9_L1e_4_toGEtH3R}
