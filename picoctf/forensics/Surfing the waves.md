@@ -10,7 +10,7 @@ has been encoded in some way. By looping through them we can undo the encoding u
 into one large hexadecimal string and convert it to ascii to get the entire program that was used to create the audio file.
 
 CODE:
-
+```
 from scipy.io import wavfile
 
 # Load the audio file
@@ -41,5 +41,5 @@ flag_hex_str = "".join(flag_hex)
 flag_str = bytearray.fromhex(flag_hex_str).decode()
 
 print(flag_str)
-
+```
 When we run the flag, the encoding program along with the flag are printed.
